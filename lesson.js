@@ -1,6 +1,5 @@
 "use strict";
 //データ型
-var Message;
 var Cat = /** @class */ (function () {
     function Cat(age, weight) {
         this.age = age;
@@ -15,8 +14,7 @@ var Cat = /** @class */ (function () {
     return Cat;
 }());
 var myCat = new Cat(3, 5.1);
-Message =
-    "うちの猫は" + myCat.getAge() + "歳で、体重は" + myCat.getWeight() + "kgです";
+var Message = "うちの猫は" + myCat.getAge() + "歳で、体重は" + myCat.getWeight() + "kgです";
 document.write(Message, "<br/>");
 var Monster = /** @class */ (function () {
     function Monster(name, hp) {
@@ -41,8 +39,7 @@ var SEASONS;
     SEASONS[SEASONS["AUTUMN"] = 2] = "AUTUMN";
     SEASONS[SEASONS["WINTER"] = 3] = "WINTER";
 })(SEASONS || (SEASONS = {}));
-var season;
-season = SEASONS.SUMMER;
+var season = SEASONS.SUMMER;
 if (season == SEASONS.SUMMER) {
     document.write("夏", "<br/>");
 }
@@ -63,8 +60,7 @@ var paramtest = function (age) {
 document.write(paramtest(1, 2, 3, 4, 5), "<br>");
 //ジェネリクス
 var parrot = function (data) {
-    var ret;
-    ret = data;
+    var ret = data;
     return ret;
 };
 document.write(parrot("ジェネリクス"));

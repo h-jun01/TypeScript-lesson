@@ -1,5 +1,4 @@
 //データ型
-let Message: string;
 class Cat {
   private age: number;
   private weight: number;
@@ -17,8 +16,8 @@ class Cat {
     return this.weight;
   }
 }
-let myCat = new Cat(3, 5.1);
-Message =
+const myCat = new Cat(3, 5.1);
+const Message: string =
   "うちの猫は" + myCat.getAge() + "歳で、体重は" + myCat.getWeight() + "kgです";
 document.write(Message, "<br/>");
 
@@ -39,7 +38,7 @@ class Monster {
     return this.hp;
   }
 }
-let aMonster = new Monster("スライム", 5);
+const aMonster = new Monster("スライム", 5);
 document.write(
   aMonster.getName() + "(lv." + aMonster.getHP() + ")が現れた!",
   "<br/>"
@@ -52,16 +51,14 @@ enum SEASONS {
   AUTUMN,
   WINTER
 }
-
-let season: SEASONS;
-season = SEASONS.SUMMER;
+const season: SEASONS = SEASONS.SUMMER;
 
 if (season == SEASONS.SUMMER) {
   document.write("夏", "<br/>");
 }
 
 //配列
-let fruits: string[] = ["りんご", "ぱいなっぷる", "きうい", "みかん"];
+const fruits: string[] = ["りんご", "ぱいなっぷる", "きうい", "みかん"];
 document.write(fruits[3], "<br/>");
 
 //スプレッド演算子
@@ -77,8 +74,7 @@ document.write(paramtest(1, 2, 3, 4, 5), "<br>");
 
 //ジェネリクス
 const parrot = <T>(data: T): T => {
-  let ret: T;
-  ret = data;
+  const ret: T = data;
   return ret;
 };
 document.write(parrot<string>("ジェネリクス"));
